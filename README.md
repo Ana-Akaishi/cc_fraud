@@ -38,3 +38,10 @@ So, during special holiday I should expect an increase in the probability of fra
 Before the internet, retail used to give deals during the day to attract more people to stores. But today, the industry shifted to scatter the deals during the week so they don't overwork logistics and warehouses. Take Amazon for example, Black Friday deals start at the first week of November, by doing this they can still sell product with great discounts and leave only the big hits for the actual BF date.
 
 By using the week, we catch all the opportunies for scams and frauds.
+
+## Summary
+In this Project I conducted some experiments using 3 different models to classify fraud in CC. This is an unbalanced dataset, which means I'll have to treat this on my models, and when choosing the performance metric.
+
+I feature engineered some variables based on date and important dates for retail. After working at Amazon, I know deals and promotions happen during the week of big retail events (such as Black Friday and Christmas). That's why I chose to create a dummy for transactions made on the week of retail event. Some events doesn't have a fixed week, so I looked for possible week numbers it would be.
+
+Gradient Boosting algorithms outperfor random forest and logit. With almost 95% of probability to classifying a transaction right (AUC 0.942). Due the unbalanced dataset, AUC was the best metric to compare models and account for the miniroty class (is_fraud = 1).
